@@ -354,7 +354,7 @@ class Eth2(EthereumModule):
             self,
             to_ts: Timestamp,
     ) -> None:
-        """Goes through all saved validators and sees which need to have their stats requeried"""
+        """Goes through all saved validators and sees which need to have their stats required"""
         now = ts_now()
         dbeth2 = DBEth2(self.database)
         result = dbeth2.get_validators_to_query_for_stats(up_to_ts=to_ts)
